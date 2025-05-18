@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Shop\OrderResource\Pages;
 use App\Filament\Resources\Shop\OrderResource;
 use Filament\Actions;
 use Filament\Pages\Concerns\ExposesTableToWidgets;
-use Filament\Resources\Components\Tab;
 use Filament\Resources\Pages\ListRecords;
 
 class ListOrders extends ListRecords
@@ -29,12 +28,12 @@ class ListOrders extends ListRecords
     public function getTabs(): array
     {
         return [
-            null => Tab::make('All'),
-            'new' => Tab::make()->query(fn ($query) => $query->where('status', 'new')),
-            'processing' => Tab::make()->query(fn ($query) => $query->where('status', 'processing')),
-            'shipped' => Tab::make()->query(fn ($query) => $query->where('status', 'shipped')),
-            'delivered' => Tab::make()->query(fn ($query) => $query->where('status', 'delivered')),
-            'cancelled' => Tab::make()->query(fn ($query) => $query->where('status', 'cancelled')),
+            null => \Filament\Schemas\Components\Tabs\Tab::make('All'),
+            'new' => \Filament\Schemas\Components\Tabs\Tab::make()->query(fn ($query) => $query->where('status', 'new')),
+            'processing' => \Filament\Schemas\Components\Tabs\Tab::make()->query(fn ($query) => $query->where('status', 'processing')),
+            'shipped' => \Filament\Schemas\Components\Tabs\Tab::make()->query(fn ($query) => $query->where('status', 'shipped')),
+            'delivered' => \Filament\Schemas\Components\Tabs\Tab::make()->query(fn ($query) => $query->where('status', 'delivered')),
+            'cancelled' => \Filament\Schemas\Components\Tabs\Tab::make()->query(fn ($query) => $query->where('status', 'cancelled')),
         ];
     }
 }

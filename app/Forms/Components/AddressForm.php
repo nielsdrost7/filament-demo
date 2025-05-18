@@ -8,7 +8,7 @@ use Squire\Models\Country;
 
 class AddressForm extends Forms\Components\Field
 {
-    protected string $view = 'filament-forms::components.group';
+    protected string $view = 'filament-schemas::components.grid';
 
     /** @var string|callable|null */
     public $relationship = null;
@@ -37,10 +37,10 @@ class AddressForm extends Forms\Components\Field
         $record?->touch();
     }
 
-    public function getChildComponents(): array
+    public function getDefaultChildComponents(): array
     {
         return [
-            Forms\Components\Grid::make()
+            \Filament\Schemas\Components\Grid::make()
                 ->schema([
                     Forms\Components\Select::make('country')
                         ->searchable()
@@ -50,7 +50,7 @@ class AddressForm extends Forms\Components\Field
             Forms\Components\TextInput::make('street')
                 ->label('Street address')
                 ->maxLength(255),
-            Forms\Components\Grid::make(3)
+            \Filament\Schemas\Components\Grid::make(3)
                 ->schema([
                     Forms\Components\TextInput::make('city')
                         ->maxLength(255),

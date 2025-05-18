@@ -6,11 +6,8 @@ use App\Filament\Resources\Blog\PostResource\Pages;
 use App\Models\Blog\Post;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieTagsInput;
-use Filament\Forms\Form;
 use Filament\Infolists\Components;
-use Filament\Infolists\Infolist;
 use Filament\Notifications\Notification;
-use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Pages\Page;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -28,25 +25,25 @@ class PostResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static ?string $navigationGroup = 'Blog';
+    protected static string | \UnitEnum | null $navigationGroup = 'Blog';
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
 
     protected static ?int $navigationSort = 0;
 
-    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
+    protected static ?\Filament\Pages\Enums\SubNavigationPosition $subNavigationPosition = \Filament\Pages\Enums\SubNavigationPosition::Top;
 
-    public static function form(Form $form): Form
+    public static function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make()
+        return $schema
+            ->components([
+                \Filament\Schemas\Components\Section::make()
                     ->schema([
                         Forms\Components\TextInput::make('title')
                             ->required()
                             ->live(onBlur: true)
                             ->maxLength(255)
-                            ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                            ->afterStateUpdated(fn (string $operation, $state, \Filament\Schemas\Components\Utilities\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
 
                         Forms\Components\TextInput::make('slug')
                             ->disabled()
@@ -76,7 +73,7 @@ class PostResource extends Resource
                     ])
                     ->columns(2),
 
-                Forms\Components\Section::make('Image')
+                \Filament\Schemas\Components\Section::make('Image')
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->image()
@@ -131,7 +128,7 @@ class PostResource extends Resource
             ])
             ->filters([
                 Tables\Filters\Filter::make('published_at')
-                    ->form([
+                    ->schema([
                         Forms\Components\DatePicker::make('published_from')
                             ->placeholder(fn ($state): string => 'Dec 18, ' . now()->subYear()->format('Y')),
                         Forms\Components\DatePicker::make('published_until')
@@ -161,14 +158,14 @@ class PostResource extends Resource
                     }),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+                \Filament\Actions\ViewAction::make(),
 
-                Tables\Actions\EditAction::make(),
+                \Filament\Actions\EditAction::make(),
 
-                Tables\Actions\DeleteAction::make(),
+                \Filament\Actions\DeleteAction::make(),
             ])
             ->groupedBulkActions([
-                Tables\Actions\DeleteBulkAction::make()
+                \Filament\Actions\DeleteBulkAction::make()
                     ->action(function () {
                         Notification::make()
                             ->title('Now, now, don\'t be cheeky, leave some records for others to play with!')
@@ -178,16 +175,16 @@ class PostResource extends Resource
             ]);
     }
 
-    public static function infolist(Infolist $infolist): Infolist
+    public static function infolist(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
-        return $infolist
-            ->schema([
-                Components\Section::make()
+        return $schema
+            ->components([
+                \Filament\Schemas\Components\Section::make()
                     ->schema([
-                        Components\Split::make([
-                            Components\Grid::make(2)
+                        \Filament\Schemas\Components\Flex::make([
+                            \Filament\Schemas\Components\Grid::make(2)
                                 ->schema([
-                                    Components\Group::make([
+                                    \Filament\Schemas\Components\Group::make([
                                         Components\TextEntry::make('title'),
                                         Components\TextEntry::make('slug'),
                                         Components\TextEntry::make('published_at')
@@ -195,7 +192,7 @@ class PostResource extends Resource
                                             ->date()
                                             ->color('success'),
                                     ]),
-                                    Components\Group::make([
+                                    \Filament\Schemas\Components\Group::make([
                                         Components\TextEntry::make('author.name'),
                                         Components\TextEntry::make('category.name'),
                                         Components\SpatieTagsEntry::make('tags'),
@@ -206,7 +203,7 @@ class PostResource extends Resource
                                 ->grow(false),
                         ])->from('lg'),
                     ]),
-                Components\Section::make('Content')
+                \Filament\Schemas\Components\Section::make('Content')
                     ->schema([
                         Components\TextEntry::make('content')
                             ->prose()

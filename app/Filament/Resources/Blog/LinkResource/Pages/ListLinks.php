@@ -8,7 +8,7 @@ use Filament\Resources\Pages\ListRecords;
 
 class ListLinks extends ListRecords
 {
-    use ListRecords\Concerns\Translatable;
+    use \LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
 
     protected static string $resource = LinkResource::class;
 

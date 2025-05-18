@@ -8,7 +8,7 @@ use Filament\Resources\Pages\ViewRecord;
 
 class ViewLink extends ViewRecord
 {
-    use ViewRecord\Concerns\Translatable;
+    use \LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
 
     protected static string $resource = LinkResource::class;
 

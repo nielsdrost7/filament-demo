@@ -8,7 +8,7 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditLink extends EditRecord
 {
-    use EditRecord\Concerns\Translatable;
+    use \LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
 
     protected static string $resource = LinkResource::class;
 

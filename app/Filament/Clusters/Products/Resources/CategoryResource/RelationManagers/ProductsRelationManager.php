@@ -3,9 +3,7 @@
 namespace App\Filament\Clusters\Products\Resources\CategoryResource\RelationManagers;
 
 use App\Filament\Clusters\Products\Resources\ProductResource;
-use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Tables;
 use Filament\Tables\Table;
 
 class ProductsRelationManager extends RelationManager
@@ -14,22 +12,22 @@ class ProductsRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    public function form(Form $form): Form
+    public function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
-        return ProductResource::form($form);
+        return ProductResource::form($schema);
     }
 
     public function table(Table $table): Table
     {
         return ProductResource::table($table)
             ->headerActions([
-                Tables\Actions\CreateAction::make(),
+                \Filament\Actions\CreateAction::make(),
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(),
+                \Filament\Actions\DeleteAction::make(),
             ])
             ->groupedBulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                \Filament\Actions\DeleteBulkAction::make(),
             ]);
     }
 }

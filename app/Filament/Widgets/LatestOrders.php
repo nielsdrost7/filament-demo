@@ -47,7 +47,7 @@ class LatestOrders extends BaseWidget
                     ->sortable(),
             ])
             ->actions([
-                Tables\Actions\Action::make('open')
+                \Filament\Actions\Action::make('open')
                     ->url(fn (Order $record): string => OrderResource::getUrl('edit', ['record' => $record])),
             ]);
     }

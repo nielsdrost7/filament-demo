@@ -8,7 +8,7 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateLink extends CreateRecord
 {
-    use CreateRecord\Concerns\Translatable;
+    use \LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
 
     protected static string $resource = LinkResource::class;
 

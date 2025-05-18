@@ -5,13 +5,10 @@ namespace App\Filament\Resources\Blog;
 use App\Filament\Resources\Blog\LinkResource\Pages;
 use App\Models\Blog\Link;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Infolists\Components\ColorEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\TextEntry;
-use Filament\Infolists\Infolist;
 use Filament\Notifications\Notification;
-use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
@@ -19,20 +16,20 @@ use Filament\Tables\Table;
 
 class LinkResource extends Resource
 {
-    use Translatable;
+    use \LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
 
     protected static ?string $model = Link::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-link';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-link';
 
-    protected static ?string $navigationGroup = 'Blog';
+    protected static string | \UnitEnum | null $navigationGroup = 'Blog';
 
     protected static ?int $navigationSort = 3;
 
-    public static function form(Form $form): Form
+    public static function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
-        return $form
-            ->schema([
+        return $schema
+            ->components([
                 Forms\Components\TextInput::make('title')
                     ->maxLength(255)
                     ->required(),
@@ -54,10 +51,10 @@ class LinkResource extends Resource
             ]);
     }
 
-    public static function infolist(Infolist $infolist): Infolist
+    public static function infolist(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
     {
-        return $infolist
-            ->schema([
+        return $schema
+            ->components([
                 TextEntry::make('title'),
                 ColorEntry::make('color'),
                 TextEntry::make('description')
@@ -110,16 +107,16 @@ class LinkResource extends Resource
                 'all',
             ])
             ->actions([
-                Tables\Actions\Action::make('visit')
+                \Filament\Actions\Action::make('visit')
                     ->label('Visit link')
                     ->icon('heroicon-m-arrow-top-right-on-square')
                     ->color('gray')
                     ->url(fn (Link $record): string => '#' . urlencode($record->url)),
-                Tables\Actions\EditAction::make(),
+                \Filament\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make()
+                \Filament\Actions\BulkActionGroup::make([
+                    \Filament\Actions\DeleteBulkAction::make()
                         ->action(function () {
                             Notification::make()
                                 ->title('Now, now, don\'t be cheeky, leave some records for others to play with!')
