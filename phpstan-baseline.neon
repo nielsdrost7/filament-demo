@@ -1,0 +1,406 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\GetRandomImages\\:\\:getRandomImages\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\GetRandomImages\\:\\:getRandomImages\\(\\) has parameter \\$schema with no type specified\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\GetRandomImages\\:\\:handle\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\GetRandomImages\\:\\:removeDuplicates\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\GetRandomImages\\:\\:removeDuplicates\\(\\) has parameter \\$schema with no type specified\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Parameter \\$contents of static method Illuminate\\\\Support\\\\Facades\\\\File\\:\\:put\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: app/Console/Commands/GetRandomImages.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentProject\\:\\:formatPaths\\(\\) has parameter \\$paths with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentProject.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentProject\\:\\:formatPaths\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentProject.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentProject\\:\\:runSubprocess\\(\\) has parameter \\$command with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentProject.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Check\\:\\:parseOnly\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Check.php
+
+		-
+			message: "#^Parameter \\#1 \\$basePath of method App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Check\\:\\:scanPath\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Check.php
+
+		-
+			message: "#^Property App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Check\\:\\:\\$allowedTypes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Check.php
+
+		-
+			message: "#^Property App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Check\\:\\:\\$matches type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Check.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Fix\\:\\:parseOnly\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Method App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Fix\\:\\:rewriteContent\\(\\) should return string but returns string\\|null\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Parameter \\#1 \\$path of method App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Fix\\:\\:scanAndRewrite\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function preg_replace expects array\\|string, string\\|null given\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
+			count: 3
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Property App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Fix\\:\\:\\$allowedTypes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Property App\\\\Console\\\\Commands\\\\UpgradeFilamentV4Fix\\:\\:\\$rewritten type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Console/Commands/UpgradeFilamentV4Fix.php
+
+		-
+			message: "#^Parameter \\#1 \\$num of function number_format expects float, float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Filament/Clusters/Products/Resources/ProductResource/Widgets/ProductStats.php
+
+		-
+			message: "#^Parameter \\#1 \\$num of function number_format expects float, float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Filament/Resources/Shop/OrderResource/Widgets/OrderStats.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Address uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Address.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Brand\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Address.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Customer\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Address.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Address\\:\\:brands\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Brand\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Brand, \\$this\\(App\\\\Models\\\\Address\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Address.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Address\\:\\:customers\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Customer\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Shop\\\\Customer, \\$this\\(App\\\\Models\\\\Address\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Address.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Blog\\\\Author uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Blog/Author.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Blog/Author.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Blog\\\\Author\\:\\:posts\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post, \\$this\\(App\\\\Models\\\\Blog\\\\Author\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Blog/Author.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Blog\\\\Category uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Blog/Category.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Blog/Category.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Blog\\\\Category\\:\\:posts\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Blog\\\\Post, \\$this\\(App\\\\Models\\\\Blog\\\\Category\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Blog/Category.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Blog\\\\Link uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Blog/Link.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Blog\\\\Post uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Blog/Post.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Blog/Post.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Blog\\\\Post\\:\\:author\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Blog\\\\Author, App\\\\Models\\\\Blog\\\\Post\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Blog\\\\Author, \\$this\\(App\\\\Models\\\\Blog\\\\Post\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Blog/Post.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Blog\\\\Post\\:\\:category\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Blog\\\\Category, App\\\\Models\\\\Blog\\\\Post\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Blog\\\\Category, \\$this\\(App\\\\Models\\\\Blog\\\\Post\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Blog/Post.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Blog\\\\Post\\:\\:comments\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment, \\$this\\(App\\\\Models\\\\Blog\\\\Post\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Blog/Post.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Comment uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Comment.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Comment\\:\\:commentable\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, App\\\\Models\\\\Comment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, \\$this\\(App\\\\Models\\\\Comment\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Comment.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Comment\\:\\:customer\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Customer, App\\\\Models\\\\Comment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Customer, \\$this\\(App\\\\Models\\\\Comment\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Comment.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Brand uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Brand.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Product\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Brand.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Brand.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Brand\\:\\:addresses\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address, \\$this\\(App\\\\Models\\\\Shop\\\\Brand\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Brand.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Brand\\:\\:products\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Product\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Product, \\$this\\(App\\\\Models\\\\Shop\\\\Brand\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Brand.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Category uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Product\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Category\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Category\\:\\:children\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Category\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Category, \\$this\\(App\\\\Models\\\\Shop\\\\Category\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Category\\:\\:parent\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Category, App\\\\Models\\\\Shop\\\\Category\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Category, \\$this\\(App\\\\Models\\\\Shop\\\\Category\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Category\\:\\:products\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Product\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Product, \\$this\\(App\\\\Models\\\\Shop\\\\Category\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Category.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Customer uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Comment\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasManyThrough\\<App\\\\Models\\\\Shop\\\\Payment\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasManyThrough\\: TRelatedModel, TIntermediateModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Customer\\:\\:addresses\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphToMany\\<App\\\\Models\\\\Address, \\$this\\(App\\\\Models\\\\Shop\\\\Customer\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Customer\\:\\:comments\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Comment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Comment, \\$this\\(App\\\\Models\\\\Shop\\\\Customer\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Customer\\:\\:payments\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasManyThrough\\<App\\\\Models\\\\Shop\\\\Payment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasManyThrough\\<App\\\\Models\\\\Shop\\\\Payment, App\\\\Models\\\\Shop\\\\Order, \\$this\\(App\\\\Models\\\\Shop\\\\Customer\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Customer.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Order uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\OrderItem\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Payment\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphOne\\<App\\\\Models\\\\Shop\\\\OrderAddress\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphOne\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Order\\:\\:address\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphOne\\<App\\\\Models\\\\Shop\\\\OrderAddress\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphOne\\<App\\\\Models\\\\Shop\\\\OrderAddress, \\$this\\(App\\\\Models\\\\Shop\\\\Order\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Order\\:\\:customer\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Customer, App\\\\Models\\\\Shop\\\\Order\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Customer, \\$this\\(App\\\\Models\\\\Shop\\\\Order\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Order\\:\\:items\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\OrderItem\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\OrderItem, \\$this\\(App\\\\Models\\\\Shop\\\\Order\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Order\\:\\:payments\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Payment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<App\\\\Models\\\\Shop\\\\Payment, \\$this\\(App\\\\Models\\\\Shop\\\\Order\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Order.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\OrderAddress uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/OrderAddress.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\OrderAddress\\:\\:addressable\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, App\\\\Models\\\\Shop\\\\OrderAddress\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo\\<Illuminate\\\\Database\\\\Eloquent\\\\Model, \\$this\\(App\\\\Models\\\\Shop\\\\OrderAddress\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/OrderAddress.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\OrderItem uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/OrderItem.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Payment uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Payment.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Payment\\:\\:order\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Order, App\\\\Models\\\\Shop\\\\Payment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Order, \\$this\\(App\\\\Models\\\\Shop\\\\Payment\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Payment.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Shop\\\\Product uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Category\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Generic type Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment\\> in PHPDoc tag @return does not specify all template types of class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\: TRelatedModel, TDeclaringModel$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Product\\:\\:brand\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Brand, App\\\\Models\\\\Shop\\\\Product\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo\\<App\\\\Models\\\\Shop\\\\Brand, \\$this\\(App\\\\Models\\\\Shop\\\\Product\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Product\\:\\:categories\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Category\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany\\<App\\\\Models\\\\Shop\\\\Category, \\$this\\(App\\\\Models\\\\Shop\\\\Product\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Method App\\\\Models\\\\Shop\\\\Product\\:\\:comments\\(\\) should return Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment\\> but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphMany\\<App\\\\Models\\\\Comment, \\$this\\(App\\\\Models\\\\Shop\\\\Product\\)\\>\\.$#"
+			count: 1
+			path: app/Models/Shop/Product.php
+
+		-
+			message: "#^Class App\\\\Models\\\\Team uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/Team.php
+
+		-
+			message: "#^Class App\\\\Models\\\\User uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: app/Models/User.php
