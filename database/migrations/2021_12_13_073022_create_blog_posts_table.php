@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('blog_posts', function (Blueprint $table) {
+        Schema::create('blog_posts', function (Blueprint $table): void {
             $table->id();
             $table->foreignId('blog_author_id')->nullable()->cascadeOnDelete();
             $table->foreignId('blog_category_id')->nullable()->nullOnDelete();
@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('published_at')->nullable();
             $table->string('seo_title', 60)->nullable();
             $table->string('seo_description', 160)->nullable();
-            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

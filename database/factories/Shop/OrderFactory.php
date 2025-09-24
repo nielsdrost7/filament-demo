@@ -5,6 +5,9 @@ namespace Database\Factories\Shop;
 use App\Models\Shop\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<Order>
+ */
 class OrderFactory extends Factory
 {
     /**
@@ -29,7 +32,7 @@ class OrderFactory extends Factory
 
     public function configure(): Factory
     {
-        return $this->afterCreating(function (Order $order) {
+        return $this->afterCreating(function (Order $order): void {
             $order->address()->save(OrderAddressFactory::new()->make());
         });
     }

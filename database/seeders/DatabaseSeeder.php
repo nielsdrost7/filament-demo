@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Filament\Resources\Shop\OrderResource;
+use App\Filament\Resources\Shop\Orders\OrderResource;
 use App\Models\Address;
 use App\Models\Blog\Author;
 use App\Models\Blog\Category as BlogCategory;
@@ -18,12 +18,13 @@ use App\Models\Shop\Payment;
 use App\Models\Shop\Product;
 use App\Models\User;
 use Closure;
-use Filament\Notifications\Actions\Action;
+use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Helper\ProgressBar;
 
@@ -41,6 +42,7 @@ class DatabaseSeeder extends Seeder
         $user = $this->withProgressBar(1, fn () => User::factory(1)->create([
             'name' => 'Demo User',
             'email' => 'admin@filamentphp.com',
+            'password' => Hash::make('demo.Filament@2021!'),
         ]));
         $this->command->info('Admin user created.');
 

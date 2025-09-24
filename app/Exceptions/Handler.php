@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -34,8 +36,17 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
+        $this->reportable(function (Throwable $e): void {
             //
         });
+    }
+
+    protected function throttle(Throwable $e): ?Limit
+    {
+        if (($e instanceof HttpException) && ($e->getStatusCode() === 419)) {
+            return Limit::perMinute(1);
+        }
+
+        return null;
     }
 }

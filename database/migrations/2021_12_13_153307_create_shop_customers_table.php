@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shop_customers', function (Blueprint $table) {
+        Schema::create('shop_customers', function (Blueprint $table): void {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('photo')->nullable();
-            $table->enum('gender', ['male', 'female']);
             $table->string('phone')->nullable();
             $table->date('birthday')->nullable();
             $table->timestamps();
